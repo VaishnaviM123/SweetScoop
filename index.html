@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Scoop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid ms-sm-0  ms-md-2 ms-lg-3 ms-xl-4">
+            <div class="d-flex">
+                <span><a href="#"><img src="./images/logo.png" width="90px" height="70px"></a></span>
+                <h5 class=" text-primary-emphasis fst-italic fw-bolder fs-1 text-uppercase my-2  animate__animated animate__swing">SWEET SCOOPS</h5>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sweet Scoop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body ms-xl-5 ms-xxl-5 ms-lg-3">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-uppercase fw-bolder mx-lg-1 mx-xl-2" style="color: rgb(7, 28, 102);" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase fw-bold mx-lg-1 mx-xl-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ice-cream fs-4"></i>Flavors</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-uppercase fw-bold"  href="#">Action</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">Another action</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link text-uppercase fw-bold mx-lg-1 mx-xl-2" aria-current="page" href="#"></i>About</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link text-uppercase fw-bold mx-lg-1 mx-xl-2" aria-current="page" href="#"><i class="fa-solid fa-phone-volume fs-4"></i>Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pt-0 pe-1">
+                        <li class="nav-item mx-lg-0 mx-xl-2">
+                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.729); border: rgba(7, 28, 102, 0.679); border-radius: 50%;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.729); border: rgba(7, 28, 102, 0.679); border-radius: 50%;"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.679); border: rgba(7, 28, 102, 0.749); border-radius: 50px;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-user"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form - Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mybtn3 d-flex justify-content-between">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to Sweet Scoops</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>                 
+                    <div class="form-floating">
+                        <input type="text" class="form-control mt-3 border-bottom" id="u1" placeholder="Useranme">
+                        <label for="u1">Username</label>                    
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control mt-3 border-bottom" id="p1" placeholder="Password">
+                        <label for="p1">Password</label>                    
+                    </div>
+                    <div class="pt-3 d-flex justify-content-between">
+                        <p class="text-primary-emphasis">New User? &nbsp; &nbsp; <a href="#">Registerhere</a></p>
+                        <button type="button" class="btn btn-dark">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousal part -->
+    <div id="ce" class="c carousel carousel-dark slide carousel-fade pb-5" data-bs-ride="carousel">
+        <div class="carousel-inner c" data-bs-ride="carousel">
+            <div class="carousel-item active c-item" data-bs-interval="2000">
+                <img src="./images/c1.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption carousel-c1 d-md-block">
+                    <h1 class="text-uppercase px-0 fw-bolder display-3">All your faves In one place!</h1>
+                    <button class="btn btn-primary px-4 py-2 px-1 fs-lg-5 fs-md-4 fs-sm-3 mt-4 b1">Get the Scoop!</button>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="2000">
+                <img src="./images/c2.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption carousel-c2 top-0 mt-5 mx-0 d-md-block">
+                    <h1 class="mt-5 text-uppercase fw-bolder display-3">Mix and Match Recipes</h1>
+                    <button class="btn btn-outline-light px-4 py-2 fs-lg-5 fs-md-4 fs-sm-3 mt-3 b1">See all <span class="s2">the Recipes</span></button>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="2000">
+                <img src="./images/c3.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption carousel-c3 top-0 mt-5 d-md-block">
+                    <h1 class="text-uppercase mt-5 fw-bold display-3">Browse by your favorite treat</h1>
+                    <p class="fw-bold display-5 mt-3">See all the treat type!</p>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="2000">
+                <img src="./images/c4.png" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption carousel-c4 top-0 mt-5 d-md-block">
+                    <h1 class="text-light text-uppercase fw-bold px-0 mt-5 display-3">So much to love So little time</h1>
+                    <p class="text-light h4 mt-3">Check out all your favorites, in one place</p>
+                    <button class="btn btn-secondary px-4 py-2 px-1 fs-lg-5 fs-md-4 fs-sm-3 mb-2 mt-3 b1">See all <span class="s2"> the Brands</span></button>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="2000">
+                <img src="./images/c5.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption carousel-c5 d-md-block top-0">
+                    <h1 class="text-uppercase fw-bold display-4 top-0 mt-5">Find your new fave flavor</h1>
+                    <p class="fw-bold display-5 mt-3">Take the quiz to see which flavor you're feeling</p>
+                    <button class="btn btn-light px-4 py-2 px-1 fs-lg-5 fs-md-4 fs-sm-3 mt-4 text-dark b1">Take the Quiz</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ce" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ce" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container w-75">
+        <div class="r1">
+            <div class="r1-1">
+               <h1 class="pt-5 display-5 fw-bolder" style="text-align: center;">Winter’s on <br> Seasonal flavors are, too.</h1>
+                <h3 class="pt-2 display-5" style="text-align: center;">Peppermint, mint, cinnamon and <br> caramel are waiting for you.</h3>
+                <p class="pt-2" style="text-align: center; font-weight: 700;">Every bite tastes like biting into a piece of ripe fruit. Made with real fruit juice, 
+                        <br> it's the snack that refreshes you from the inside out.</p>    
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="r1" style="display: flex; justify-content: center;">
+        <div class="r2 text-center">
+            <div class="r2-1">
+                <h1 class="mt-4">Winter’s on <br> Seasonal flavors are, too.</h1>
+                <h3>Peppermint, mint, cinnamon and <br> caramel are waiting for you.</h3>
+                <p>Every bite tastes like biting into a piece of ripe fruit. Made with real fruit juice, 
+                        <br> it's the snack that refreshes you from the inside out.</p>    
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Scrollspy -->
+    <div class="row">
+        <div class="col-1">
+            <nav id="navbar-eg" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#i1">Favorite</a>
+                    <a class="nav-link" href="#i2">What's New</a>
+                    <a class="nav-link" href="#i3">Summer Menu</a>
+                    <a class="nav-link" href="#i4">Get Today</a>
+                </nav>
+            </nav>
+        </div>
+
+        <div class="col-11">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                <!-- Card -->
+                <div class="container w-100 py-5 text-center"> 
+                    <h1 class="text-primary text-center">All Time <span class="text-uppercase text-primary-emphasis" style="text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #111e54;">Favorites</span></h1>
+                    <div class="row g-3 pt-5" id="i1">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card5.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Cotton Candy</h5>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>120 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card6.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Berry Strawberry</h5>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>140 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card7.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Mississippi Mud</h5>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>150 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card8.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Gulab Jamun</h5>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>180 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="container w-100 py-5 text-center"> 
+                    <h1 class="text-primary text-center">What's <span class="text-uppercase text-primary-emphasis" style="text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #111e54;">New</span></h1>
+                    <div class="row g-3 pt-5" id="i2">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card4.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Snickers Chocolate</h5>
+                                    <p class="card-text">Milkshake</p>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>110 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card3.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Snickers Caramel</h5>
+                                    <p class="card-text">Milkshake</p>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>120 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card2.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Carrot Halwa</h5>
+                                    <p class="card-text">Sundae</p>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>150 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
+                                <img src="./images/card1.png" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Snickers Caramel</h5>
+                                    <p class="card-text">Sundae</p>
+                                    <div class="d-flex justify-content-around align-items-center mt-2">
+                                        <h5>180 $</h5>
+                                        <button class="btn btn-primary mt-2 b1">Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container w-75 c1 my-5 py-0" id="i3">
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="col-lg-5 col-md-6 col-sm-12 px-0">
+                    <img src="./images/bg6.gif" width="100%" height="100%">
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-12 mt-lg-3 mt-md-1 mt-sm-1 p-lg-5 p-md-3 p-sm-3">
+                    <h2 class="text-info-emphasis mt-4 text-center">Dessert menu for this <span class="text-primary text-uppercase">Summer</span></h2>
+                    <p class="text-success text-justify mt-3 fw-bold" style="text-align: justify;">Digging into that scoop of cold, delicious ice cream is one of the greatest pleasures of life. Any party is incomplete without a soothing array of desserts, mostly ice creams. Your Netflix binge-watch gets extra special when you have a tub of flavourful ice cream. With the weather still hot, we have compiled a list of new ice cream flavours to try this summer.</p>
+                    <div class="text-center mb-2">
+                        <button class="btn btn-danger">Discover More!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- images -->
+        <div class="container w-100 mt-5 py-0" id="i4">
+            <h1 class="text-center text-uppercase" style="color: #430846c9; text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #511154;">Get Today</h1>
+            <div class="row m-4 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="col-lg-2 col-md-2 col-sm-6 px-0">
+                    <img src="./images/pic4.jpg" width="100%" height="50%">
+                    <img src="./images/pic1.jpg" width="100%" height="50%">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 px-0">
+                    <img src="./images/pic2.jpg" width="100%" height="40%">
+                    <img src="./images/pic5.jpg" width="100%" height="60%">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                    <img src="./images/pic3.jpg" width="100%" height="100%"> 
+              </div>
+            </div>
+        </div>
+
+    
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="page">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-cont">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Sweet Scoop</h4>
+                    <ul class="f-ul">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">contact</a></li>
+                        <li><a href="">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul class="f-ul">
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Order status</a></li>
+                        <li><a href="">Reservation</a></li>
+                        <li><a href="">Payment option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a class="fa-brands fa-facebook"></a>
+                        <a class="fa-brands fa-youtube"></a>
+                        <a class="fa-brands fa-twitter"></a>
+                        <a class="fa-brands fa-instagram"></a>
+                        <a class="fa-brands fa-whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
