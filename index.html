@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
@@ -34,9 +36,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-uppercase fw-bold mx-lg-1 mx-xl-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ice-cream fs-4"></i>Flavors</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-uppercase fw-bold"  href="#">Action</a></li>
-                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">Another action</a></li>
-                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold"  href="#">Chocolate</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">Caramel</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">vanilla</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold" href="#">More...</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-2">
@@ -49,8 +52,8 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pt-0 pe-1">
                         <li class="nav-item mx-lg-0 mx-xl-2">
                             <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.729); border: rgba(7, 28, 102, 0.679); border-radius: 50%;"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.729); border: rgba(7, 28, 102, 0.679); border-radius: 50%;"><i class="fa-solid fa-location-dot"></i></button>
-                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.679); border: rgba(7, 28, 102, 0.749); border-radius: 50px;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-user"></i></button>
+                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.729); border: rgba(7, 28, 102, 0.679); border-radius: 50%;" data-bs-toggle="modal" data-bs-target="#m1"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn btn-primary fw-bold border-none" style="background-color: rgba(7, 28, 102, 0.679); border: rgba(7, 28, 102, 0.749); border-radius: 50px;" data-bs-toggle="modal" data-bs-target="#m2"><i class="fa-solid fa-user"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +62,24 @@
     </nav>
 
     <!-- Form - Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="m1" tabindex="-1" aria-labelledby="Location" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mybtn3 d-flex justify-content-between">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Near you!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="pt-3 d-flex justify-content-between">
+                        <input class="form-control me-2" type="search" placeholder="Enter your city" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="m2" tabindex="-1" aria-labelledby="Login" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -138,24 +158,13 @@
     <div class="container w-75">
         <div class="r1">
             <div class="r1-1">
-               <h1 class="pt-5 display-5 fw-bolder" style="text-align: center;">Winter’s on <br> Seasonal flavors are, too.</h1>
-                <h3 class="pt-2 display-5" style="text-align: center;">Peppermint, mint, cinnamon and <br> caramel are waiting for you.</h3>
-                <p class="pt-2" style="text-align: center; font-weight: 700;">Every bite tastes like biting into a piece of ripe fruit. Made with real fruit juice, 
+                <h1 class="pt-3 display-3 fw-bolder" style="text-align: center; color: #afbcf1;">Winter’s on <br> Seasonal flavors are, too.</h1>
+                <h3 class="pt-2 display-5" style="text-align: center; color: #afbcf1a6;">Peppermint, mint, cinnamon and <br> caramel are waiting for you.</h3>
+                <p class="pt-2 fs-3 fs-sm-4" style="text-align: center; font-weight: 700; color: rgba(255, 228, 196, 0.667)">Every bite tastes like biting into a piece of ripe fruit. Made with real fruit juice, 
                         <br> it's the snack that refreshes you from the inside out.</p>    
             </div>
         </div>
     </div>
-
-    <!-- <div class="r1" style="display: flex; justify-content: center;">
-        <div class="r2 text-center">
-            <div class="r2-1">
-                <h1 class="mt-4">Winter’s on <br> Seasonal flavors are, too.</h1>
-                <h3>Peppermint, mint, cinnamon and <br> caramel are waiting for you.</h3>
-                <p>Every bite tastes like biting into a piece of ripe fruit. Made with real fruit juice, 
-                        <br> it's the snack that refreshes you from the inside out.</p>    
-            </div>
-        </div>
-    </div> -->
 
     <!-- Scrollspy -->
     <div class="row">
@@ -177,7 +186,7 @@
                     <h1 class="text-primary text-center">All Time <span class="text-uppercase text-primary-emphasis" style="text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #111e54;">Favorites</span></h1>
                     <div class="row g-3 pt-5" id="i1">
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="1000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card5.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -191,7 +200,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="2000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card6.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -205,7 +214,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="1000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card7.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -219,7 +228,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="2000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card8.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -239,7 +248,7 @@
                     <h1 class="text-primary text-center">What's <span class="text-uppercase text-primary-emphasis" style="text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #111e54;">New</span></h1>
                     <div class="row g-3 pt-5" id="i2">
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="1000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card4.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -254,7 +263,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="2000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card3.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -269,7 +278,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="1000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card2.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -284,7 +293,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;" data-aos="fade-down" data-aos-duration="2000">
                                 <button type="button" class="btn btn-light fw-bold ms-2 mt-2 p-0 text-center" style="background-color: #dad8d8; width: 35px; height: 35px; border-radius: 50%;"><i class="fa-regular fa-heart text-center"></i></button>
                                 <img src="./images/card1.png" class="card-img-top">
                                 <div class="card-body text-center">
@@ -305,10 +314,10 @@
 
         <div class="container w-75 c1 my-5 py-0" id="i3">
             <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div class="col-lg-5 col-md-6 col-sm-12 px-0">
+                <div class="col-lg-5 col-md-6 col-sm-12 px-0" data-aos="zoom-out-down" data-aos-easing="linear" data-aos-duration="1500">
                     <img src="./images/bg6.gif" width="100%" height="100%">
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12 mt-lg-3 mt-md-1 mt-sm-1 p-lg-5 p-md-3 p-sm-3">
+                <div class="col-lg-7 col-md-6 col-sm-12 mt-lg-3 mt-md-1 mt-sm-1 p-lg-5 p-md-3 p-sm-3" data-aos="zoom-out-down" data-aos-easing="linear" data-aos-duration="1500">
                     <h2 class="text-info-emphasis mt-4 text-center">Dessert menu for this <span class="text-primary text-uppercase">Summer</span></h2>
                     <p class="text-success text-justify mt-3 fw-bold" style="text-align: justify;">Digging into that scoop of cold, delicious ice cream is one of the greatest pleasures of life. Any party is incomplete without a soothing array of desserts, mostly ice creams. Your Netflix binge-watch gets extra special when you have a tub of flavourful ice cream. With the weather still hot, we have compiled a list of new ice cream flavours to try this summer.</p>
                     <div class="text-center mb-2">
@@ -321,23 +330,24 @@
         <!-- images -->
         <div class="container w-100 mt-5 py-0" id="i4">
             <h1 class="text-center text-uppercase" style="color: #430846c9; text-shadow: -2px -2px 0 #fefefe, 1px -1px 0 #000000, -1px 1px 0 #000000, 2px 2px 0 #511154;">Get Today</h1>
-            <div class="row m-4 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div class="col-lg-2 col-md-2 col-sm-6 px-0">
-                    <img src="./images/pic4.jpg" width="100%" height="50%">
-                    <img src="./images/pic1.jpg" width="100%" height="50%">
+            <div class="row m-4 mt-5">
+                <div class="c2 col-lg-2 col-md-2 col-sm-6 px-0" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                    <img src="./images/pic4.jpg" width="100%" height="33.33%">
+                    <img src="./images/pic1.jpg" width="100%" height="33.33%">
+                    <img src="./images/pic6.jpg" width="100%" height="33.34%">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 px-0">
+                <div class="c2 col-lg-4 col-md-4 col-sm-6 px-0" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                     <img src="./images/pic2.jpg" width="100%" height="40%">
-                    <img src="./images/pic5.jpg" width="100%" height="60%">
+                    <img src="./images/pic3.png" width="100%" height="60%">
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 px-0">
-                    <img src="./images/pic3.jpg" width="100%" height="100%"> 
+                <div class="c2 col-lg-6 col-md-6 col-sm-12 px-0" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
+                    <img src="./images/pic5.jpg" width="100%" height="100%"> 
               </div>
             </div>
         </div>
-
-    
-
+        <div class="container text-center py-3">
+            <button class="btn btn-primary border-0 py-3 px-5 fs-4 fw-bold">Check out more Images ... <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
     </div>
 
     <!-- Pagination -->
@@ -384,10 +394,19 @@
                         <a class="fa-brands fa-instagram"></a>
                         <a class="fa-brands fa-whatsapp"></a>
                     </div>
+                    <h4 class="mt-4">Mobile app</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fa-brands fa-android"></i></a>
+                        <a href=""><i class="fa-brands fa-apple"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="text-center py-3 text-light" style="background-color: #000000c1;">
+        <p>Copyright © Sweet Scoop 1999. All rights reserved.</p>
+    </div>
 
+    <script>AOS.init();</script>
 </body>
 </html>
