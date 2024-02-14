@@ -1,12 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+/* body{
+    overflow-x: hidden;
+} */
+.cent{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+    margin: auto;
+}
+  
+.tab {
+    width: 100%;
+    height: 70px;
+    background-color:  #d4e5ff89;
+}
+.monitor-wrapper {
+    margin-top: 2px;
+    background: #363f4e;
+    width: 99.6%;
+    height: 50px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.monitor {
+    width: 98%;
+    height: 25px;
+    background-color: #4d5a6a;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.monitor p {
+    font-family: "VT323", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    animation: move 20s infinite linear;
+    color: #ffffff;
+    padding: 0;
+} 
+@keyframes move {
+    from {
+      left: 1470px;
+    }
+    to {
+      left: -200px;
+    }
+}
 .navbar{
-    background-color: #d1d4e793;
-    margin: 0px;
+    background-color: #d4e5ff89;
+    margin: 70px 0px 0px 0px;
     padding: 0px;
 }
 .nav-link{
     color: rgba(7, 28, 102, 0.796);
-    /* font-weight: 500; */
     position: relative;
     padding-bottom: .5rem;
 }
@@ -102,13 +151,23 @@
     border-color: rgba(95, 34, 216, 0.644);
     font-weight: 700;
 }   
-.card{
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+.win {
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    font-family: "Righteous", cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
 }
-.card:hover{
+.win:hover{
+    transform: rotate('87');
+}
+.card{
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card img:hover{
     transform: scale(1.05);
+    transition: all 1.2s ease-in-out;
 }
 .card-img-top{
     padding-left: 10px;
@@ -123,27 +182,52 @@
     box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
 }
 .r1{
-    background-image: url("./images/bg2.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 400px;
+    background-color: rgb(237, 234, 247);
+}
+.r2{
+    position: relative;
+    height: 450px;
 }
 .r1-1{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    font-family: "Protest Revolution", sans-serif;
+    font-style: normal;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.701), rgba(0, 0, 0, 0.74));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.r2-1{
     opacity: 0;
     width: 100%;
     height: 100%;
+    top:0;
+    left: 0;
     font-family: "Protest Revolution", sans-serif;
     font-style: normal;
-}
-.r1-1:hover{
-    opacity: 1;
-    background-color: #00000098;
-    color: white;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.352), rgb(0, 0, 0));
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.6s;
+} 
+.r2-1:hover{
+    opacity: 1; 
 }
 .page{
     display: flex;
     justify-content: center;
+}
+.r2-1 > *{
+    transition: transform 0.6s;
 }
 .footer{
     margin: 0;
@@ -220,13 +304,19 @@
 .f-ul{
     list-style: none;
 }
+.c2{
+    height: 700px;
+}
+.c2 img{
+    padding: 2px;
+}
 .c2 img:hover{
     transform: scale(1.03);
 }
 
 @media(min-width: 1400px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .carousel-c1 h1{
         font-size: 387%;
@@ -241,7 +331,7 @@
 
 @media(min-width: 1200px) and (max-width: 1400px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .carousel-c1 h1{
         font-size: 325%;
@@ -256,7 +346,7 @@
 
 @media(min-width: 982px) and (max-width: 1200px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .carousel-c1 h1{
         font-size: 295%;
@@ -283,7 +373,7 @@
 
 @media(min-width: 768px) and (max-width: 982px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .carousel-c1 h1{
         letter-spacing: 4px;
@@ -296,7 +386,7 @@
 }
 @media(min-width: 576px) and (max-width: 768px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .s2{
         display: none;
@@ -318,7 +408,7 @@
 
 @media(max-width: 576px){
     .c{
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .s2{
         display: none;
